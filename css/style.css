@@ -55,20 +55,30 @@ a {
 header {
 
     background:white;
-    padding:25px 8%;
+    padding:20px 8%;
     display:flex;
     justify-content:space-between;
     align-items:center;
+    box-shadow:0 4px 15px rgba(0,0,0,.05);
+
+}
+
+
+.logo img {
+
+    width:180px;
+    height:auto;
+    display:block;
 
 }
 
 
 .logo {
 
-    font-family:'Cormorant Garamond', serif;
-    font-size:2.2rem;
-    color:var(--brown);
-    font-weight:600;
+    display:flex;
+    align-items:center;
+
+}
 
 }
 
