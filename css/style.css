@@ -97,58 +97,94 @@ nav a.active {
 ================================== */
 
 
-.btn {
+.btn{
 
     display:inline-block;
-    background:var(--brown);
+
+    padding:15px 34px;
+
+    background:#7c5c4d;
+
     color:white;
-    padding:14px 30px;
-    border-radius:30px;
-    margin:10px;
+
+    text-decoration:none;
+
+    border-radius:40px;
+
+    font-weight:600;
+
     transition:.3s;
 
 }
 
+.btn:hover{
 
-.btn:hover {
+    transform:translateY(-3px);
 
-    background:#65483c;
+    background:#6b4d40;
 
 }
 
+.btn-outline{
 
-.btn-light {
+    background:transparent;
+
+    border:2px solid white;
+
+}
+
+.btn-outline:hover{
 
     background:white;
-    color:var(--brown);
+
+    color:#7c5c4d;
 
 }
 
 
 
-/* ==================================
+
+/* ==========================
    HERO
-================================== */
+========================== */
 
+.hero{
 
-.hero {
+    position:relative;
 
-    min-height:650px;
-    background:
+    min-height:85vh;
 
-    linear-gradient(
-    rgba(0,0,0,.35),
-    rgba(0,0,0,.35)
-    ),
-
-    url('../images/home-hero.jpg');
-
-    background-size:cover;
-    background-position:center;
+    background:url("../images/home-hero.jpg") center center/cover no-repeat;
 
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
+}
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.35);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:40px;
+
+}
+
+.hero-content{
+
+    max-width:700px;
 
     text-align:center;
 
@@ -156,21 +192,51 @@ nav a.active {
 
 }
 
+.hero-kicker{
 
+    text-transform:uppercase;
 
-.hero h1 {
+    letter-spacing:3px;
 
-    color:white;
-    font-size:4rem;
+    font-size:.95rem;
+
+    margin-bottom:20px;
+
+    opacity:.9;
 
 }
 
+.hero h1{
 
-.hero p {
+    font-size:4rem;
 
-    font-size:1.4rem;
-    margin:20px auto;
-    max-width:600px;
+    line-height:1.15;
+
+    margin-bottom:25px;
+
+    color:white;
+
+}
+
+.hero-text{
+
+    font-size:1.2rem;
+
+    line-height:1.8;
+
+    margin-bottom:40px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
 
 }
 
@@ -405,5 +471,36 @@ nav a {
 
 }
 
+
+}
+
+
+@media(max-width:768px){
+
+.hero{
+
+    min-height:75vh;
+
+}
+
+.hero h1{
+
+    font-size:2.5rem;
+
+}
+
+.hero-text{
+
+    font-size:1rem;
+
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
 
 }
