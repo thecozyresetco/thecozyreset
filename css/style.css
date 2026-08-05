@@ -1,3 +1,30 @@
+/* ==========================
+   PAGE FADE IN
+========================== */
+
+body{
+
+    animation:fadeIn .6s ease-in;
+
+}
+
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
 /* ==================================
    THE COZY RESET
    Main Website Styles
@@ -659,6 +686,7 @@ nav a.active {
     text-align:center;
 
 }
+
 
 /* ==================================
    SECTIONS
