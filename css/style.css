@@ -53,48 +53,42 @@ a {
 ================================== */
 
 header {
+    background: #ffffff;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 12px rgba(0,0,0,.08);
+}
 
-    background:white;
-    padding:20px 8%;
+.logo img{
+    height:60px;
+    width:auto;
+}
+
+nav{
     display:flex;
-    justify-content:space-between;
-    align-items:center;
-    box-shadow:0 4px 15px rgba(0,0,0,.05);
-
+    gap:30px;
 }
 
-
-.logo img {
-
-    width:180px;
-    height:auto;
-    display:block;
-
+nav a{
+    color:#6b5b4b;
+    text-decoration:none;
+    font-weight:600;
+    transition:.25s;
 }
 
-
-.logo {
-
-    display:flex;
-    align-items:center;
-
+nav a:hover{
+    color:#b78a68;
 }
 
-}
-
-
-nav a {
-
-    margin-left:25px;
-    font-size:.95rem;
-    color:var(--text);
-}
-
-
-nav a:hover {
-
-    color:var(--brown);
-
+nav a.active{
+    color:#b78a68;
+    border-bottom:2px solid #b78a68;
+    padding-bottom:4px;
 }
 
 
