@@ -74,21 +74,21 @@ nav{
     gap:30px;
 }
 
-nav a{
-    color:#6b5b4b;
-    text-decoration:none;
-    font-weight:600;
-    transition:.25s;
+nav a {
+    color: #6b5b4b;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.25s ease;
 }
 
-nav a:hover{
-    color:#b78a68;
+nav a:hover {
+    color: #b78a68;
 }
 
-nav a.active{
-    color:#b78a68;
-    border-bottom:2px solid #b78a68;
-    padding-bottom:4px;
+nav a.active {
+    color: #b78a68;
+    border-bottom: 2px solid #b78a68;
+    padding-bottom: 4px;
 }
 
 
