@@ -1392,3 +1392,112 @@ nav a {
 }
 
 }
+
+/* ==========================
+   POLICY PAGES
+========================== */
+
+.policy-page{
+
+    max-width:900px;
+
+    margin:70px auto;
+
+    padding:50px;
+
+    background:#FFFFFF;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+
+}
+
+
+.policy-page h2{
+
+    font-family:'Cormorant', serif;
+
+    font-size:32px;
+
+    color:#7C5C4D;
+
+    margin-top:40px;
+
+    margin-bottom:15px;
+
+}
+
+
+.policy-page h2:first-child{
+
+    margin-top:0;
+
+}
+
+
+.policy-page p{
+
+    color:#555;
+
+    font-size:16px;
+
+    line-height:1.9;
+
+    margin-bottom:20px;
+
+}
+
+
+.policy-page ul{
+
+    margin:20px 0 30px 25px;
+
+}
+
+
+.policy-page li{
+
+    margin-bottom:12px;
+
+    color:#555;
+
+}
+
+
+.policy-page a{
+
+    color:#7C5C4D;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+}
+
+
+.policy-page a:hover{
+
+    color:#A8B89A;
+
+}
+
+
+@media(max-width:768px){
+
+    .policy-page{
+
+        margin:30px 20px;
+
+        padding:30px 25px;
+
+    }
+
+
+    .policy-page h2{
+
+        font-size:28px;
+
+    }
+
+}
