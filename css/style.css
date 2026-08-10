@@ -598,165 +598,180 @@ nav a.active {
 
 }
 
-```css
+css
 /* =========================================
-   COZY COLLECTION
+COZY COLLECTION
 ========================================= */
 
 .shop-cards {
-    max-width: 1200px;
-    margin: 0 auto;
+max-width: 1200px;
+margin: 0 auto;
 
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
 
-    gap: 20px;
+display: grid;
+
+grid-template-columns: repeat(6, 1fr);
+
+gap: 20px;
+
+
 }
 
+/* First row: 3 cards */
 
-/* =========================================
-   SHOP CARDS
-========================================= */
-
-.shop-card {
-    display: flex;
-    flex-direction: column;
-
-    padding: 35px 25px;
-
-    background: #fffaf6;
-
-    border: 1px solid #e7dcd3;
-
-    border-radius: 12px;
-
-    text-align: center;
-
-    text-decoration: none;
-
-    color: inherit;
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease,
-        border-color 0.3s ease;
+.shop-card:nth-child(1),
+.shop-card:nth-child(2),
+.shop-card:nth-child(3) {
+grid-column: span 2;
 }
 
-
-/* Center the two cards on the second row */
+/* Second row: 2 centered cards */
 
 .shop-card:nth-child(4) {
-    grid-column: 1 / 2;
-    margin-left: 50%;
+grid-column: 2 / span 2;
 }
 
 .shop-card:nth-child(5) {
-    grid-column: 2 / 3;
+grid-column: 4 / span 2;
 }
 
+.shop-card {
+display: flex;
+flex-direction: column;
 
-/* Hover Effect */
+
+padding: 35px 25px;
+
+background: #fffaf6;
+
+border: 1px solid #e7dcd3;
+
+border-radius: 12px;
+
+text-align: center;
+
+text-decoration: none;
+
+color: inherit;
+
+transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+
+
+}
 
 .shop-card:hover {
-    transform: translateY(-6px);
+transform: translateY(-6px);
 
-    box-shadow: 0 12px 30px rgba(107, 91, 75, 0.12);
 
-    border-color: #c9a98a;
+box-shadow: 0 12px 30px rgba(107, 91, 75, 0.12);
+
+border-color: #c9a98a;
+
+
 }
-
-
-/* Icons */
 
 .shop-icon {
-    font-size: 40px;
+font-size: 40px;
 
-    margin-bottom: 18px;
+
+margin-bottom: 18px;
+
+
 }
-
-
-/* Headings */
 
 .shop-card h3 {
-    color: #6b5b4b;
+color: #6b5b4b;
 
-    font-size: 22px;
 
-    margin-bottom: 12px;
+font-size: 22px;
+
+margin-bottom: 12px;
+
+
 }
-
-
-/* Description */
 
 .shop-card p {
-    color: #6f6863;
+color: #6f6863;
 
-    line-height: 1.65;
 
-    margin-bottom: 22px;
+line-height: 1.65;
+
+margin-bottom: 22px;
+
+
 }
-
-
-/* Card Link */
 
 .shop-card-link {
-    margin-top: auto;
+margin-top: auto;
 
-    color: #8b6f5d;
 
-    font-weight: 600;
+color: #8b6f5d;
 
-    font-size: 15px;
+font-weight: 600;
+
+font-size: 15px;
+
+
 }
 
-
 /* =========================================
-   SHOP BUTTON
+SHOP BUTTON
 ========================================= */
 
 .shop-button {
-    text-align: center;
+text-align: center;
 
-    margin-top: 45px;
+margin-top: 45px;
+
+
 }
 
-
 /* =========================================
-   TABLET
+TABLET
 ========================================= */
 
 @media (max-width: 900px) {
 
-    .shop-cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
 
-    .shop-card:nth-child(4),
-    .shop-card:nth-child(5) {
-        grid-column: auto;
-        margin-left: 0;
-    }
+.shop-cards {
+    grid-template-columns: repeat(2, 1fr);
+}
 
+.shop-card:nth-child(1),
+.shop-card:nth-child(2),
+.shop-card:nth-child(3),
+.shop-card:nth-child(4),
+.shop-card:nth-child(5) {
+    grid-column: span 1;
 }
 
 
+}
+
 /* =========================================
-   MOBILE
+MOBILE
 ========================================= */
 
 @media (max-width: 600px) {
 
-    .shop-cards {
-        grid-template-columns: 1fr;
 
-        max-width: 550px;
-    }
+.shop-cards {
+    grid-template-columns: 1fr;
 
-    .shop-card:nth-child(4),
-    .shop-card:nth-child(5) {
-        grid-column: auto;
-        margin-left: 0;
-    }
+    max-width: 550px;
+}
+
+.shop-card:nth-child(1),
+.shop-card:nth-child(2),
+.shop-card:nth-child(3),
+.shop-card:nth-child(4),
+.shop-card:nth-child(5) {
+    grid-column: span 1;
+}
+
 
 }
 
