@@ -1501,3 +1501,30 @@ nav a {
     }
 
 }
+
+/* =========================================
+   MOBILE NAVIGATION
+========================================= */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 20px 15px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 14px;
+        width: 100%;
+    }
+
+    nav a {
+        font-size: 15px;
+        white-space: nowrap;
+    }
+
+}
