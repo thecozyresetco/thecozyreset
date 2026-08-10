@@ -1528,3 +1528,98 @@ nav a {
     }
 
 }
+
+```css
+/* =========================================
+   COZY COMMUNITY NEWSLETTER
+========================================= */
+
+.cozy-community {
+    padding: 80px 20px;
+    background: #f5eee7;
+    text-align: center;
+}
+
+.community-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cozy-community .eyebrow {
+    margin-bottom: 10px;
+}
+
+.cozy-community h2 {
+    margin-bottom: 20px;
+}
+
+.cozy-community > .community-content > p:not(.eyebrow):not(.privacy-note) {
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.newsletter-form input {
+    flex: 1 1 200px;
+    min-width: 0;
+    padding: 15px 18px;
+    border: 1px solid #d8c8bb;
+    border-radius: 6px;
+    background: #fffaf6;
+    color: #7c5c4d;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.newsletter-form input::placeholder {
+    color: #8b7a70;
+}
+
+.newsletter-form input:focus {
+    outline: none;
+    border-color: #c9a98a;
+    box-shadow: 0 0 0 3px rgba(201, 169, 138, 0.15);
+}
+
+.newsletter-form .btn {
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.privacy-note {
+    margin-top: 18px;
+    font-size: 13px;
+    color: #7c6d64;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .cozy-community {
+        padding: 60px 20px;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .newsletter-form input,
+    .newsletter-form .btn {
+        width: 100%;
+    }
+
+}
+```
+
