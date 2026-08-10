@@ -865,145 +865,52 @@ font-size:34px;
 
 }
 
-/* ==========================
-   COZY COMMUNITY
-========================== */
+/* =========================================
+COZY COMMUNITY / KIT SIGNUP
+========================================= */
 
-.cozy-community{
+.newsletter-form {
+max-width: 500px;
+margin: 30px auto 0;
 
-    padding:100px 8%;
+display: flex;
+flex-direction: column;
 
-    background:#A8B89A;
-
-    text-align:center;
-
-}
-
-
-.community-content{
-
-    max-width:700px;
-
-    margin:auto;
+gap: 14px;
 
 }
 
+.newsletter-form input {
+width: 100%;
+box-sizing: border-box;
 
-.community-content .eyebrow{
+padding: 15px 18px;
 
-    color:#FFFFFF;
+border: 1px solid #d9ccc2;
+border-radius: 8px;
 
-}
+background: #fff;
 
-
-.community-content h2{
-
-    font-family:'Cormorant', serif;
-
-    font-size:42px;
-
-    color:#FFFFFF;
-
-    margin-bottom:20px;
+font-family: inherit;
+font-size: 16px;
 
 }
 
+.newsletter-form input {
+outline: none;
+border-color: #b89a82;
+}
 
-.community-content > p{
+.newsletter-form button {
+width: 100%;
 
-    color:#FFFFFF;
-
-    font-size:17px;
-
-    line-height:1.8;
-
-    margin-bottom:30px;
+margin-top: 4px;
 
 }
 
-
-.newsletter-form{
-
-    display:flex;
-
-    max-width:600px;
-
-    margin:0 auto 15px;
-
-    gap:10px;
-
-}
-
-
-.newsletter-form input{
-
-    flex:1;
-
-    padding:16px 20px;
-
-    border:none;
-
-    border-radius:30px;
-
-    font-family:'Poppins', sans-serif;
-
-    font-size:15px;
-
-    outline:none;
-
-}
-
-
-.newsletter-form .btn{
-
-    border:none;
-
-    cursor:pointer;
-
-    background:#7C5C4D;
-
-    color:#FFFFFF;
-
-}
-
-
-.newsletter-form .btn:hover{
-
-    background:#5F4539;
-
-}
-
-
-.privacy-note{
-
-    font-size:13px !important;
-
-    opacity:.9;
-
-}
-
-
-@media(max-width:768px){
-
-    .newsletter-form{
-
-        flex-direction:column;
-
-    }
-
-    .newsletter-form input,
-    .newsletter-form .btn{
-
-        width:100%;
-
-    }
-
-    .community-content h2{
-
-        font-size:34px;
-
-    }
-
+.privacy-note {
+margin-top: 15px;
+font-size: 13px;
 }
 /* ==================================
    SECTIONS
