@@ -532,7 +532,7 @@ nav a.active {
 
 /* =========================================
    COZY COLLECTION
-   DESKTOP = 3 ON TOP / 2 CENTERED BELOW
+   3 CARDS TOP / 2 CARDS BOTTOM
 ========================================= */
 
 .featured-shop {
@@ -540,20 +540,19 @@ nav a.active {
     background: #faf7f3;
 }
 
-
 .shop-cards {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 
     display: grid;
-
     grid-template-columns: repeat(6, 1fr);
-
-    gap: 20px;
+    gap: 24px;
 }
 
-
-/* TOP ROW - 3 CARDS */
+/* -----------------------------------------
+   TOP ROW — 3 CARDS
+----------------------------------------- */
 
 .shop-card:nth-child(1),
 .shop-card:nth-child(2),
@@ -561,38 +560,37 @@ nav a.active {
     grid-column: span 2;
 }
 
-
-/* BOTTOM ROW - 2 CENTERED CARDS */
+/* -----------------------------------------
+   BOTTOM ROW — 2 CENTERED CARDS
+----------------------------------------- */
 
 .shop-card:nth-child(4) {
     grid-column: 2 / span 2;
 }
 
-
 .shop-card:nth-child(5) {
     grid-column: 4 / span 2;
 }
 
+/* -----------------------------------------
+   CARD
+----------------------------------------- */
 
 .shop-card {
     display: flex;
     flex-direction: column;
 
+    min-height: 300px;
     padding: 35px 25px;
 
     background: #fffaf6;
 
     border: 1px solid #e7dcd3;
-
     border-radius: 12px;
 
     text-align: center;
-
     text-decoration: none;
-
     color: inherit;
-
-    min-width: 0;
 
     transition:
         transform 0.3s ease,
@@ -600,21 +598,19 @@ nav a.active {
         border-color 0.3s ease;
 }
 
-
 .shop-card:hover {
     transform: translateY(-6px);
 
-    box-shadow: 0 12px 30px rgba(107, 91, 75, 0.12);
+    box-shadow:
+        0 12px 30px rgba(107, 91, 75, 0.12);
 
     border-color: #c9a98a;
 }
-
 
 .shop-icon {
     font-size: 40px;
     margin-bottom: 18px;
 }
-
 
 .shop-card h3 {
     color: #6b5b4b;
@@ -622,27 +618,75 @@ nav a.active {
     margin-bottom: 12px;
 }
 
-
 .shop-card p {
     color: #6f6863;
     line-height: 1.65;
     margin-bottom: 22px;
 }
 
-
 .shop-card-link {
     margin-top: auto;
+
     color: #8b6f5d;
+
     font-weight: 600;
     font-size: 15px;
 }
 
+/* -----------------------------------------
+   SHOP BUTTON
+----------------------------------------- */
 
 .shop-button {
     text-align: center;
     margin-top: 45px;
 }
 
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .shop-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .shop-card:nth-child(1),
+    .shop-card:nth-child(2),
+    .shop-card:nth-child(3),
+    .shop-card:nth-child(4),
+    .shop-card:nth-child(5) {
+        grid-column: span 1;
+    }
+
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .featured-shop {
+        padding: 70px 20px;
+    }
+
+    .shop-cards {
+        grid-template-columns: 1fr;
+        max-width: 550px;
+    }
+
+    .shop-card:nth-child(1),
+    .shop-card:nth-child(2),
+    .shop-card:nth-child(3),
+    .shop-card:nth-child(4),
+    .shop-card:nth-child(5) {
+        grid-column: span 1;
+    }
+
+}
 
 /* =========================================
    ABOUT THE COZY RESET
@@ -697,41 +741,40 @@ nav a.active {
 
 .cozy-community {
     padding: 90px 20px;
-    background: #f8f3ee;
-}
-
-
-.community-content {
-    max-width: 750px;
-    margin: 0 auto;
+    background: #f3eee8;
     text-align: center;
 }
 
+.community-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
 
 .community-content h2 {
-    font-size: 2.7rem;
     color: #7c5c4d;
+    font-size: 2.7rem;
     margin-bottom: 20px;
 }
 
-
-.community-content > p {
+.community-content > p:not(.eyebrow):not(.privacy-note) {
+    max-width: 650px;
+    margin: 0 auto;
     color: #666;
+    font-size: 1.05rem;
     line-height: 1.8;
 }
 
-
-/* IMPORTANT:
-   Form is intentionally stacked.
-   First Name
-   Email
-   Button
-*/
+/* -----------------------------------------
+   KIT FORM
+   FIRST NAME
+   EMAIL
+   BUTTON
+   ALL STACKED
+----------------------------------------- */
 
 .newsletter-form {
     width: 100%;
     max-width: 500px;
-
     margin: 30px auto 0;
 
     display: flex;
@@ -740,69 +783,81 @@ nav a.active {
     gap: 14px;
 }
 
-
 .newsletter-form input {
-    display: block;
-
     width: 100%;
-
-    min-height: 52px;
+    display: block;
 
     padding: 15px 18px;
 
     border: 1px solid #d8c8bb;
-
     border-radius: 8px;
 
-    background: #fffaf6;
-
-    color: #7c5c4d;
+    background: #ffffff;
+    color: #4a4a4a;
 
     font-family: inherit;
-
     font-size: 16px;
 
-    outline: none;
+    box-sizing: border-box;
 }
-
 
 .newsletter-form input::placeholder {
     color: #8b7a70;
 }
 
-
 .newsletter-form input:focus {
+    outline: none;
+
     border-color: #c9a98a;
 
     box-shadow:
         0 0 0 3px rgba(201, 169, 138, 0.15);
 }
 
-
 .newsletter-form .btn {
-    display: block;
-
     width: 100%;
-
-    min-height: 52px;
+    display: block;
 
     margin-top: 2px;
 
     border: none;
-
     cursor: pointer;
 }
-
 
 .privacy-note {
     margin-top: 15px;
 
-    font-size: 13px;
+    color: #766c66;
 
-    color: #7c7068 !important;
+    font-size: 13px;
+    line-height: 1.6;
 }
 
+/* -----------------------------------------
+   MOBILE
+----------------------------------------- */
 
+@media (max-width: 600px) {
+
+    .cozy-community {
+        padding: 70px 20px;
+    }
+
+    .community-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .newsletter-form {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .newsletter-form input,
+    .newsletter-form .btn {
+        width: 100%;
+    }
+
+}
 /* =========================================
    GENERAL SECTIONS
 ========================================= */
