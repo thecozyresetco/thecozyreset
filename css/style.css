@@ -608,29 +608,15 @@ nav a.active {
     margin: 0 auto;
 
     display: grid;
-
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 
     gap: 20px;
 }
 
 
-/* First two cards */
-
-.shop-card:nth-child(1),
-.shop-card:nth-child(2) {
-    grid-column: span 2;
-}
-
-
-/* Last three cards */
-
-.shop-card:nth-child(3),
-.shop-card:nth-child(4),
-.shop-card:nth-child(5) {
-    grid-column: span 2;
-}
-
+/* =========================================
+   SHOP CARDS
+========================================= */
 
 .shop-card {
     display: flex;
@@ -657,6 +643,20 @@ nav a.active {
 }
 
 
+/* Center the two cards on the second row */
+
+.shop-card:nth-child(4) {
+    grid-column: 1 / 2;
+    margin-left: 50%;
+}
+
+.shop-card:nth-child(5) {
+    grid-column: 2 / 3;
+}
+
+
+/* Hover Effect */
+
 .shop-card:hover {
     transform: translateY(-6px);
 
@@ -666,12 +666,16 @@ nav a.active {
 }
 
 
+/* Icons */
+
 .shop-icon {
     font-size: 40px;
 
     margin-bottom: 18px;
 }
 
+
+/* Headings */
 
 .shop-card h3 {
     color: #6b5b4b;
@@ -682,6 +686,8 @@ nav a.active {
 }
 
 
+/* Description */
+
 .shop-card p {
     color: #6f6863;
 
@@ -690,6 +696,8 @@ nav a.active {
     margin-bottom: 22px;
 }
 
+
+/* Card Link */
 
 .shop-card-link {
     margin-top: auto;
@@ -723,12 +731,10 @@ nav a.active {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .shop-card:nth-child(1),
-    .shop-card:nth-child(2),
-    .shop-card:nth-child(3),
     .shop-card:nth-child(4),
     .shop-card:nth-child(5) {
-        grid-column: span 1;
+        grid-column: auto;
+        margin-left: 0;
     }
 
 }
@@ -746,17 +752,13 @@ nav a.active {
         max-width: 550px;
     }
 
-    .shop-card:nth-child(1),
-    .shop-card:nth-child(2),
-    .shop-card:nth-child(3),
     .shop-card:nth-child(4),
     .shop-card:nth-child(5) {
-        grid-column: span 1;
+        grid-column: auto;
+        margin-left: 0;
     }
 
 }
-```
-
 
 /* ==========================
    HOME ABOUT SECTION
