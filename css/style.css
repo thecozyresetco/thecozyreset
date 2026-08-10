@@ -1530,33 +1530,10 @@ nav a {
 }
 
 ```css
+```css
 /* =========================================
-   COZY COMMUNITY NEWSLETTER
+   NEWSLETTER FORM - STACKED BUTTON
 ========================================= */
-
-.cozy-community {
-    padding: 80px 20px;
-    background: #f5eee7;
-    text-align: center;
-}
-
-.community-content {
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.cozy-community .eyebrow {
-    margin-bottom: 10px;
-}
-
-.cozy-community h2 {
-    margin-bottom: 20px;
-}
-
-.cozy-community > .community-content > p:not(.eyebrow):not(.privacy-note) {
-    max-width: 600px;
-    margin: 0 auto 30px;
-}
 
 .newsletter-form {
     display: flex;
@@ -1568,7 +1545,7 @@ nav a {
 }
 
 .newsletter-form input {
-    flex: 1 1 200px;
+    flex: 1 1 250px;
     min-width: 0;
     padding: 15px 18px;
     border: 1px solid #d8c8bb;
@@ -1577,6 +1554,7 @@ nav a {
     color: #7c5c4d;
     font-family: inherit;
     font-size: 16px;
+    box-sizing: border-box;
 }
 
 .newsletter-form input::placeholder {
@@ -1589,26 +1567,19 @@ nav a {
     box-shadow: 0 0 0 3px rgba(201, 169, 138, 0.15);
 }
 
+/* Button sits underneath both fields */
+
 .newsletter-form .btn {
+    flex-basis: 100%;
+    width: 100%;
     border: none;
     cursor: pointer;
-    white-space: nowrap;
+    margin-top: 2px;
 }
 
-.privacy-note {
-    margin-top: 18px;
-    font-size: 13px;
-    color: #7c6d64;
-}
-
-
-/* MOBILE */
+/* Mobile */
 
 @media (max-width: 600px) {
-
-    .cozy-community {
-        padding: 60px 20px;
-    }
 
     .newsletter-form {
         flex-direction: column;
@@ -1618,8 +1589,8 @@ nav a {
     .newsletter-form input,
     .newsletter-form .btn {
         width: 100%;
+        flex: none;
     }
 
 }
 ```
-
