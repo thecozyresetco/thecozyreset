@@ -1593,4 +1593,136 @@ nav a {
     }
 
 }
+
+```css
+/* =========================================
+   FIND YOUR RESET
+========================================= */
+
+.find-reset {
+    padding: 90px 20px;
+    background: #f8f3ee;
+}
+
+.find-reset .section-title {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 50px;
+}
+
+.find-reset .section-intro {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+
+.reset-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+.reset-card {
+    display: flex;
+    flex-direction: column;
+
+    padding: 40px 30px;
+
+    background: #fffaf6;
+
+    border: 1px solid #e7dcd3;
+    border-radius: 12px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.reset-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 12px 30px rgba(107, 91, 75, 0.12);
+
+    border-color: #c9a98a;
+}
+
+
+.reset-icon {
+    font-size: 42px;
+
+    margin-bottom: 20px;
+}
+
+
+.reset-card h3 {
+    color: #6b5b4b;
+
+    font-size: 23px;
+
+    margin-bottom: 15px;
+}
+
+
+.reset-card p {
+    color: #6f6863;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+
+.reset-card span {
+    margin-top: auto;
+
+    color: #8b6f5d;
+
+    font-weight: 600;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .reset-grid {
+        grid-template-columns: 1fr;
+        max-width: 550px;
+    }
+
+    .find-reset {
+        padding: 70px 20px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .reset-card {
+        padding: 32px 22px;
+    }
+
+    .reset-card h3 {
+        font-size: 21px;
+    }
+
+}
 ```
+
