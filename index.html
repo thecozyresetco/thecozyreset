@@ -499,20 +499,36 @@ alt="Cozy self-care space with journal and candle">
             and new resources from The Cozy Reset delivered to your inbox.
         </p>
 
-        <form class="newsletter-form">
+```html
+<form
+    action="https://app.kit.com/forms/9786818/subscriptions"
+    method="post"
+    class="newsletter-form"
+>
 
-            <input
-                type="email"
-                placeholder="Enter your email address"
-                aria-label="Email address"
-                required
-            >
+    <input
+        type="text"
+        name="fields[first_name]"
+        placeholder="First Name"
+        aria-label="First Name"
+        required
+    >
 
-            <button type="submit" class="btn">
-                Join The Cozy Community
-            </button>
+    <input
+        type="email"
+        name="email_address"
+        placeholder="Email Address"
+        aria-label="Email Address"
+        required
+    >
 
-        </form>
+    <button type="submit" class="btn">
+        Join The Cozy Community
+    </button>
+
+</form>
+```
+
 
         <p class="privacy-note">
             No pressure. Just cozy reminders and occasional updates.
