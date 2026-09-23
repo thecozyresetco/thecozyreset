@@ -1673,3 +1673,69 @@ nav a.active {
     }
 
 }
+
+/* FREE COZY RESET */
+
+.free-reset-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.free-reset-text {
+    flex: 1;
+}
+
+.free-reset-text h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.free-reset-text ul {
+    margin: 20px 0;
+    padding-left: 25px;
+}
+
+.free-reset-text li {
+    margin-bottom: 8px;
+}
+
+.free-reset-image {
+    flex: 0 0 38%;
+    text-align: center;
+}
+
+.free-reset-image img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .free-reset-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .free-reset-text {
+        width: 100%;
+    }
+
+    .free-reset-image {
+        width: 100%;
+    }
+
+    .free-reset-image img {
+        max-width: 280px;
+    }
+
+}
