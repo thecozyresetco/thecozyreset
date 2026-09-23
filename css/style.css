@@ -1,1410 +1,942 @@
-/* =========================================
-   THE COZY RESET
-   MAIN WEBSITE STYLES
-========================================= */
-
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap');
-
-
-/* =========================================
-   ROOT VARIABLES
-========================================= */
-
-:root {
-    --cream: #F8F5F1;
-    --white: #FFFFFF;
-    --brown: #7C5C4D;
-    --sage: #A3B18A;
-    --beige: #E6D8C9;
-    --light: #F3EEE8;
-    --text: #4A4A4A;
-}
-
-
-/* =========================================
-   RESET
-========================================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-html {
-    scroll-behavior: smooth;
-}
-
-
-body {
-    background: var(--cream);
-    color: var(--text);
-    font-family: 'Lato', sans-serif;
-    line-height: 1.8;
-    animation: fadeIn .6s ease-in;
-}
-
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-
-h1,
-h2,
-h3 {
-    font-family: 'Cormorant Garamond', serif;
-    color: var(--brown);
-}
-
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-
-/* =========================================
-   HEADER
-========================================= */
-
-header {
-    background: #ffffff;
-    padding: 18px 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 12px rgba(0,0,0,.08);
-}
-
-
-.logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 32px;
-    font-weight: 600;
-    color: #7C5C4D;
-}
-
-
-.logo img {
-    height: 60px;
-    width: auto;
-}
-
-
-nav {
-    display: flex;
-    gap: 30px;
-}
-
-
-nav a {
-    color: #6b5b4b;
-    font-weight: 600;
-    transition: color 0.25s ease;
-}
-
-
-nav a:hover {
-    color: #b78a68;
-}
-
-
-nav a.active {
-    color: #b78a68;
-    border-bottom: 2px solid #b78a68;
-    padding-bottom: 4px;
-}
-
-
-/* =========================================
-   BUTTONS
-========================================= */
-
-.btn {
-    display: inline-block;
-    padding: 15px 34px;
-    background: #7c5c4d;
-    color: white;
-    border-radius: 40px;
-    font-weight: 600;
-    transition: .3s;
-    border: none;
-    cursor: pointer;
-}
-
-
-.btn:hover {
-    transform: translateY(-3px);
-    background: #6b4d40;
-}
-
-
-.btn-outline {
-    background: transparent;
-    border: 2px solid white;
-}
-
-
-.btn-outline:hover {
-    background: white;
-    color: #7c5c4d;
-}
-
-
-/* =========================================
-   HERO
-========================================= */
-
-.hero {
-    position: relative;
-    min-height: 85vh;
-    background: url("../images/home-hero.jpg") center center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,.35);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px;
-}
-
-
-.hero-content {
-    max-width: 700px;
-    text-align: center;
-    color: white;
-}
-
-
-.hero-kicker {
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: .95rem;
-    margin-bottom: 20px;
-    opacity: .9;
-}
-
-
-.hero h1 {
-    font-size: 4rem;
-    line-height: 1.15;
-    margin-bottom: 25px;
-    color: white;
-}
-
-
-.hero-text {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    margin-bottom: 40px;
-}
-
-
-.hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-
-/* =========================================
-   INTERNAL PAGE HERO
-========================================= */
-
-.page-hero {
-    min-height: 350px;
-    background: url("../images/home-hero.jpg") center/cover no-repeat;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.page-hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,.45);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 40px;
-    color: white;
-}
-
-
-.page-hero h1 {
-    color: white;
-    font-size: 3rem;
-    margin-bottom: 15px;
-}
-
-
-.page-hero p {
-    color: white;
-    max-width: 650px;
-    font-size: 1.2rem;
-    line-height: 1.7;
-}
-
-
-/* =========================================
-   SECTION TITLES
-========================================= */
-
-.section-title {
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto 60px;
-}
-
-
-.section-title h2 {
-    font-size: 2.7rem;
-    color: #7c5c4d;
-    margin-bottom: 20px;
-}
-
-
-.eyebrow {
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: #b78a68;
-    font-size: .85rem;
-    margin-bottom: 15px;
-}
-
-
-.section-intro {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #666;
-}
-
-
-/* =========================================
-   START YOUR RESET
-========================================= */
-
-.start-reset {
-    padding: 90px 8%;
-    background: #faf7f3;
-}
+```html
+<!DOCTYPE html>
 
+<html lang="en">
 
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
-
-.feature-card {
-    background: white;
-    border-radius: 18px;
-    padding: 40px;
-    text-decoration: none;
-    color: #555;
-    box-shadow: 0 12px 30px rgba(0,0,0,.08);
-    transition: .3s;
-}
-
-
-.feature-card:hover {
-    transform: translateY(-8px);
-}
-
-
-.feature-icon {
-    font-size: 2.8rem;
-    margin-bottom: 20px;
-}
-
-
-.feature-card h3 {
-    color: #7c5c4d;
-    margin-bottom: 15px;
-}
+<head>
 
+<meta name="p:domain_verify" content="3a56e98709c7249b03769087a6408c83"/>
 
-.feature-card p {
-    line-height: 1.8;
-    margin-bottom: 25px;
-}
-
-
-.feature-card span {
-    font-weight: 600;
-    color: #b78a68;
-}
+<meta charset="UTF-8">
 
-
-.disabled-card {
-    opacity: .85;
-    cursor: default;
-}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>The Cozy Reset | Mindfulness, Self-Care & Wellness Tools</title>
 
-.disabled-card:hover {
-    transform: none;
-}
+<meta name="description" content="The Cozy Reset offers mindfulness resources, self-care tools, and cozy wellness products designed to help you create calm in the middle of life's chaos.">
 
+<link rel="icon" type="image/png" href="favicon.png">
 
-/* =========================================
-   FIND YOUR RESET
-========================================= */
+<!-- OPEN GRAPH / SOCIAL SHARING -->
 
-.find-reset {
-    padding: 90px 20px;
-    background: #f8f3ee;
-}
+<meta property="og:title" content="The Cozy Reset | Mindfulness, Self-Care & Wellness">
 
+<meta property="og:description" content="Create calm in the middle of life's chaos with mindfulness resources, self-care tools, and cozy wellness inspiration.">
 
-.find-reset .section-title {
-    text-align: center;
-    max-width: 750px;
-    margin: 0 auto 50px;
-}
+<meta property="og:image" content="https://www.thecozyreset.co/images/social-share.jpg">
 
+<meta property="og:type" content="website">
 
-.find-reset .section-intro {
-    max-width: 650px;
-    margin: 0 auto;
-}
+<meta property="og:url" content="https://www.thecozyreset.co">
 
+<meta property="og:site_name" content="The Cozy Reset">
 
-.reset-grid {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
+<!-- TWITTER / SOCIAL CARD -->
 
+<meta name="twitter:card" content="summary_large_image">
 
-.reset-card {
-    display: flex;
-    flex-direction: column;
-    padding: 40px 30px;
-    background: #fffaf6;
-    border: 1px solid #e7dcd3;
-    border-radius: 12px;
-    text-align: center;
-    text-decoration: none;
-    color: inherit;
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease,
-        border-color 0.3s ease;
-}
+<meta name="twitter:title" content="The Cozy Reset | Create Calm in Everyday Life">
 
+<meta name="twitter:description" content="Mindfulness, self-care, and cozy wellness inspiration to help you slow down, reset, and reconnect.">
 
-.reset-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 30px rgba(107, 91, 75, 0.12);
-    border-color: #c9a98a;
-}
+<meta name="twitter:image" content="https://www.thecozyreset.co/images/social-share.jpg">
 
+<link rel="stylesheet" href="css/style.css">
 
-.reset-icon {
-    font-size: 42px;
-    margin-bottom: 20px;
-}
+<!-- GOOGLE ANALYTICS -->
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NY8DP50VMQ"></script>
 
-.reset-card h3 {
-    color: #6b5b4b;
-    font-size: 23px;
-    margin-bottom: 15px;
-}
+<script>
 
+window.dataLayer = window.dataLayer || [];
 
-.reset-card p {
-    color: #6f6863;
-    line-height: 1.7;
-    margin-bottom: 25px;
+function gtag(){
+    dataLayer.push(arguments);
 }
 
+gtag('js', new Date());
 
-.reset-card span {
-    margin-top: auto;
-    color: #8b6f5d;
-    font-weight: 600;
-    font-size: 15px;
-}
+gtag('config', 'G-NY8DP50VMQ');
 
+</script>
 
-/* =========================================
-   FEATURED BLOG
-========================================= */
+</head>
 
-.featured-blog {
-    padding: 90px 8%;
-    background: white;
-}
 
+<body>
 
-.blog-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-}
 
+<!-- HEADER -->
 
-.blog-card {
-    background: #faf7f3;
-    border-radius: 18px;
-    overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0,0,0,.08);
-    transition: .3s;
-}
+<header>
 
+<div class="logo">
+The Cozy Reset
+</div>
 
-.blog-card:hover {
-    transform: translateY(-8px);
-}
+<nav>
 
+<a href="index.html" class="active">Home</a>
 
-.blog-card img {
-    width: 100%;
-    height: 260px;
-    object-fit: cover;
-}
+<a href="blog.html">Blog</a>
 
+<a href="https://shop.thecozyreset.co">Shop</a>
 
-.blog-card-content {
-    padding: 30px;
-}
+<a href="about.html">About</a>
 
+<a href="contact.html">Contact</a>
 
-.category {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: .8rem;
-    color: #b78a68;
-    margin-bottom: 12px;
-}
+</nav>
 
+</header>
 
-.blog-card h3 {
-    color: #7c5c4d;
-    font-size: 1.7rem;
-    margin-bottom: 15px;
-}
 
 
-.blog-card p {
-    line-height: 1.7;
-}
+<!-- HERO -->
 
+<section class="hero">
 
-.blog-card a {
-    color: #7c5c4d;
-    font-weight: bold;
-}
+<div class="hero-overlay">
 
+<div class="hero-content">
 
-.blog-card a:hover {
-    color: #b78a68;
-}
+<p class="hero-kicker">
+A LITTLE SPACE TO BREATHE
+</p>
 
+<h1>
+Feeling Like You<br>
+Need a Reset?
+</h1>
 
-/* =========================================
-   COZY COLLECTION
-   3 CARDS TOP / 2 CARDS BOTTOM
-========================================= */
+<p class="hero-text">
+When life feels overwhelming, you don't have to fix everything at once.
+The 10-Minute Cozy Reset is a free guided workbook designed to help
+you pause, breathe, clear your mind, and choose one small thing you need.
+</p>
 
-.featured-shop {
-    padding: 90px 8%;
-    background: #faf7f3;
-}
+<div class="hero-buttons">
 
-.shop-cards {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 24px;
-}
+<a href="#free-reset" class="btn">
+Get Your Free Cozy Reset
+</a>
 
-/* -----------------------------------------
-   TOP ROW — 3 CARDS
------------------------------------------ */
-
-.shop-card:nth-child(1),
-.shop-card:nth-child(2),
-.shop-card:nth-child(3) {
-    grid-column: span 2;
-}
+<a href="blog.html" class="btn btn-outline">
+Explore the Blog
+</a>
 
-/* -----------------------------------------
-   BOTTOM ROW — 2 CENTERED CARDS
------------------------------------------ */
+</div>
 
-.shop-card:nth-child(4) {
-    grid-column: 2 / span 2;
-}
+<p class="hero-note">
+Free 7-page printable • No pressure • Just 10 minutes for you
+</p>
 
-.shop-card:nth-child(5) {
-    grid-column: 4 / span 2;
-}
+</div>
 
-/* -----------------------------------------
-   CARD
------------------------------------------ */
+</div>
 
-.shop-card {
-    display: flex;
-    flex-direction: column;
+</section>
 
-    min-height: 300px;
-    padding: 35px 25px;
 
-    background: #fffaf6;
 
-    border: 1px solid #e7dcd3;
-    border-radius: 12px;
+<!-- FREE COZY RESET -->
 
-    text-align: center;
-    text-decoration: none;
-    color: inherit;
+<section class="start-reset" id="free-reset">
 
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease,
-        border-color 0.3s ease;
-}
+<div class="section-title">
 
-.shop-card:hover {
-    transform: translateY(-6px);
+<p class="eyebrow">
+YOUR FREE RESET
+</p>
 
-    box-shadow:
-        0 12px 30px rgba(107, 91, 75, 0.12);
+<h2>
+Start With 10 Minutes
+</h2>
 
-    border-color: #c9a98a;
-}
+<p class="section-intro">
+Sometimes you don't need a complete solution. You just need a few quiet
+minutes to pause, breathe, and figure out what you need next.
+</p>
 
-.shop-icon {
-    font-size: 40px;
-    margin-bottom: 18px;
-}
+</div>
 
-.shop-card h3 {
-    color: #6b5b4b;
-    font-size: 22px;
-    margin-bottom: 12px;
-}
 
-.shop-card p {
-    color: #6f6863;
-    line-height: 1.65;
-    margin-bottom: 22px;
-}
+<div class="free-reset-content">
 
-.shop-card-link {
-    margin-top: auto;
 
-    color: #8b6f5d;
+<div class="free-reset-text">
 
-    font-weight: 600;
-    font-size: 15px;
-}
+<h3>
+The 10-Minute Cozy Reset
+</h3>
 
-/* -----------------------------------------
-   SHOP BUTTON
------------------------------------------ */
+<p>
+A gentle, printable guide for those moments when you're overwhelmed,
+overstimulated, stressed, or simply need a moment to yourself.
+</p>
 
-.shop-button {
-    text-align: center;
-    margin-top: 45px;
-}
+<p>
+Inside you'll find simple exercises to help you:
+</p>
 
-/* =========================================
-   TABLET
-========================================= */
+<ul>
 
-@media (max-width: 900px) {
+<li>
+Pause and check in with yourself
+</li>
 
-    .shop-cards {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
+<li>
+Calm your body
+</li>
 
-    .shop-card:nth-child(1),
-    .shop-card:nth-child(2),
-    .shop-card:nth-child(3),
-    .shop-card:nth-child(4),
-    .shop-card:nth-child(5) {
-        grid-column: span 1;
-    }
+<li>
+Clear some mental clutter
+</li>
 
-}
+<li>
+Choose one small action that feels supportive
+</li>
 
-/* =========================================
-   MOBILE
-========================================= */
+</ul>
 
-@media (max-width: 600px) {
 
-    .featured-shop {
-        padding: 70px 20px;
-    }
+<form
+    action="https://app.kit.com/forms/9786818/subscriptions"
+    method="post"
+    class="newsletter-form"
+>
 
-    .shop-cards {
-        grid-template-columns: 1fr;
-        max-width: 550px;
-    }
+<input
+    type="text"
+    name="fields[first_name]"
+    placeholder="First Name"
+    aria-label="First Name"
+    required
+>
 
-    .shop-card:nth-child(1),
-    .shop-card:nth-child(2),
-    .shop-card:nth-child(3),
-    .shop-card:nth-child(4),
-    .shop-card:nth-child(5) {
-        grid-column: span 1;
-    }
+<input
+    type="email"
+    name="email_address"
+    placeholder="Email Address"
+    aria-label="Email Address"
+    required
+>
 
-}
+<button type="submit" class="btn">
+Send Me the Free Reset
+</button>
 
-/* =========================================
-   ABOUT THE COZY RESET
-========================================= */
+</form>
 
-.home-about {
-    padding: 100px 8%;
-    background: #FFFFFF;
-}
 
+<p class="privacy-note">
+You'll receive the free guide by email after confirming your subscription.
+</p>
 
-.about-content {
-    max-width: 1200px;
-    margin: 0 auto;
+</div>
 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
 
-    gap: 60px;
+<div class="free-reset-image">
 
-    align-items: center;
-}
+<img
+    src="images/cozy-reset.jpg"
+    alt="The Cozy Reset 10-minute printable workbook"
+>
 
+</div>
 
-.about-text h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 42px;
-    line-height: 1.3;
-    color: #7C5C4D;
-    margin-bottom: 25px;
-}
 
+</div>
 
-.about-text p {
-    font-size: 17px;
-    line-height: 1.9;
-    color: #555;
-    margin-bottom: 20px;
-}
+</section>
 
 
-.about-image img {
-    width: 100%;
-    border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0,0,0,.10);
-}
 
+<!-- FIND YOUR RESET -->
 
-/* =========================================
-   COZY COMMUNITY / KIT SIGNUP
-========================================= */
+<section class="find-reset">
 
-.cozy-community {
-    padding: 90px 20px;
-    background: #f3eee8;
-    text-align: center;
-}
+<div class="section-title">
 
-.community-content {
-    max-width: 700px;
-    margin: 0 auto;
-}
+<p class="eyebrow">
+WHAT DO YOU NEED TODAY?
+</p>
 
-.community-content h2 {
-    color: #7c5c4d;
-    font-size: 2.7rem;
-    margin-bottom: 20px;
-}
+<h2>
+Find Your Reset
+</h2>
 
-.community-content > p:not(.eyebrow):not(.privacy-note) {
-    max-width: 650px;
-    margin: 0 auto;
-    color: #666;
-    font-size: 1.05rem;
-    line-height: 1.8;
-}
+<p class="section-intro">
+Whatever you're carrying today, there's a place to begin.
+Choose what you need most and take one small step toward feeling better.
+</p>
 
-/* -----------------------------------------
-   KIT FORM
-   FIRST NAME
-   EMAIL
-   BUTTON
-   ALL STACKED
------------------------------------------ */
-
-.newsletter-form {
-    width: 100%;
-    max-width: 500px;
-    margin: 30px auto 0;
-
-    display: flex;
-    flex-direction: column;
-
-    gap: 14px;
-}
+</div>
 
-.newsletter-form input {
-    width: 100%;
-    display: block;
 
-    padding: 15px 18px;
+<div class="reset-grid">
 
-    border: 1px solid #d8c8bb;
-    border-radius: 8px;
 
-    background: #ffffff;
-    color: #4a4a4a;
+<!-- RESET -->
 
-    font-family: inherit;
-    font-size: 16px;
+<a href="#free-reset" class="reset-card">
 
-    box-sizing: border-box;
-}
+<div class="reset-icon">
+🌿
+</div>
 
-.newsletter-form input::placeholder {
-    color: #8b7a70;
-}
+<h3>
+I Need a Reset
+</h3>
 
-.newsletter-form input:focus {
-    outline: none;
+<p>
+Feeling overwhelmed, anxious, or stuck in your thoughts?
+Start with a simple 10-minute reset to pause, breathe,
+and reconnect with what you need.
+</p>
 
-    border-color: #c9a98a;
+<span>
+Get the Free Reset →
+</span>
 
-    box-shadow:
-        0 0 0 3px rgba(201, 169, 138, 0.15);
-}
+</a>
 
-.newsletter-form .btn {
-    width: 100%;
-    display: block;
 
-    margin-top: 2px;
 
-    border: none;
-    cursor: pointer;
-}
+<!-- SLOW DOWN -->
 
-.privacy-note {
-    margin-top: 15px;
+<a href="blog/mindful-monday.html" class="reset-card">
 
-    color: #766c66;
+<div class="reset-icon">
+🧘
+</div>
 
-    font-size: 13px;
-    line-height: 1.6;
-}
+<h3>
+I Need to Slow Down
+</h3>
 
-/* -----------------------------------------
-   MOBILE
------------------------------------------ */
+<p>
+Give yourself permission to pause. Discover mindfulness
+practices and simple ways to become more present
+in your everyday life.
+</p>
 
-@media (max-width: 600px) {
+<span>
+Take a Pause →
+</span>
 
-    .cozy-community {
-        padding: 70px 20px;
-    }
+</a>
 
-    .community-content h2 {
-        font-size: 2.2rem;
-    }
 
-    .newsletter-form {
-        width: 100%;
-        max-width: 500px;
-    }
 
-    .newsletter-form input,
-    .newsletter-form .btn {
-        width: 100%;
-    }
+<!-- SELF CARE -->
 
-}
-/* =========================================
-   GENERAL SECTIONS
-========================================= */
-
-.section {
-    padding: 70px 8%;
-}
+<a href="https://shop.thecozyreset.co" class="reset-card">
 
+<div class="reset-icon">
+💛
+</div>
 
-/* =========================================
-   GENERAL CARDS
-========================================= */
+<h3>
+I Need Some Self-Care
+</h3>
 
-.card {
-    background: white;
+<p>
+Create a little more comfort in your day with cozy
+products, thoughtful tools, and simple reminders
+to make yourself a priority.
+</p>
 
-    border-radius: 15px;
+<span>
+Explore Self-Care →
+</span>
 
-    overflow: hidden;
+</a>
 
-    box-shadow:
-        0 10px 25px rgba(0,0,0,.08);
-}
 
+</div>
 
-.card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-}
+</section>
 
 
-.card-content {
-    padding: 25px;
-}
 
+<!-- FEATURED BLOG -->
 
-.card h3 {
-    font-size: 2rem;
-}
+<section class="featured-blog">
 
+<div class="section-title">
 
-/* =========================================
-   BLOG ARTICLES
-========================================= */
+<p class="eyebrow">
+FEATURED FROM THE BLOG
+</p>
 
-.article {
-    max-width: 900px;
+<h2>
+Gentle Guidance For Your Journey
+</h2>
 
-    margin: 50px auto;
+<p class="section-intro">
+Explore practical tools, mindfulness tips, and encouragement
+to support your mental wellness.
+</p>
 
-    background: white;
+</div>
 
-    padding: 50px;
 
-    border-radius: 15px;
-}
+<div class="blog-cards">
 
 
-.article h1 {
-    font-size: 3.5rem;
-    text-align: center;
-}
+<!-- YOU DON'T NEED TO EARN REST -->
 
+<article class="blog-card">
 
-.article h2 {
-    margin-top: 40px;
-    font-size: 2.3rem;
-}
+<img
+src="images/you-dont-need-to-earn-rest.jpg"
+alt="You Don't Need to Earn Rest"
+>
 
+<div class="blog-card-content">
 
-.article img {
-    width: 100%;
-    border-radius: 12px;
-}
+<p class="category">
+Self-Care
+</p>
 
+<h3>
+You Don't Need to Earn Rest
+</h3>
 
-/* =========================================
-   SHOP CTA
-========================================= */
+<p>
+A gentle reminder that rest is not something you have to earn
+and you are allowed to slow down without guilt.
+</p>
 
-.shop-box {
-    background: var(--brown);
+<a href="blog/rest.html">
+Read Article →
+</a>
 
-    color: white;
+</div>
 
-    text-align: center;
+</article>
 
-    padding: 60px;
 
-    border-radius: 15px;
-}
 
+<!-- PROGRESS OVER PERFECTION -->
 
-.shop-box h2 {
-    color: white;
-}
+<article class="blog-card">
 
+<img
+src="images/progress-over-perfection.jpg"
+alt="Progress Over Perfection"
+>
 
-/* =========================================
-   SITE FOOTER
-========================================= */
+<div class="blog-card-content">
 
-.site-footer {
-    background: #7C5C4D;
+<p class="category">
+Mindfulness & Growth
+</p>
 
-    color: #FFFFFF;
+<h3>
+Progress Over Perfection
+</h3>
 
-    padding: 70px 8% 25px;
-}
+<p>
+Learn how small steps, self-compassion,
+and consistency create meaningful change.
+</p>
 
+<a href="blog/progress-over-perfection.html">
+Read Article →
+</a>
 
-.footer-content {
-    max-width: 1200px;
+</div>
 
-    margin: auto;
+</article>
 
-    display: grid;
 
-    grid-template-columns: 2fr 1fr 1fr 1fr;
 
-    gap: 50px;
+<!-- MINDFUL MONDAY -->
 
-    padding-bottom: 50px;
-}
+<article class="blog-card">
 
+<img
+src="images/mindful-monday.jpg"
+alt="Mindful Monday"
+>
 
-.footer-brand h2 {
-    font-family: 'Cormorant Garamond', serif;
+<div class="blog-card-content">
 
-    font-size: 38px;
+<p class="category">
+Mindfulness
+</p>
 
-    color: #FFFFFF;
+<h3>
+Mindful Monday
+</h3>
 
-    margin-bottom: 15px;
-}
+<p>
+Start your week with intention, reflection,
+and a moment of calm.
+</p>
 
+<a href="blog/mindful-monday.html">
+Read Article →
+</a>
 
-.footer-brand p {
-    max-width: 300px;
+</div>
 
-    color: #F5F2EC;
+</article>
 
-    line-height: 1.8;
-}
 
+</div>
 
-.footer-column {
-    display: flex;
+</section>
 
-    flex-direction: column;
-}
 
 
-.footer-column h3 {
-    font-family: 'Cormorant Garamond', serif;
+<!-- COZY COLLECTION -->
 
-    font-size: 24px;
+<section class="featured-shop">
 
-    color: #FFFFFF;
 
-    margin-bottom: 18px;
-}
+<div class="section-title">
 
+<p class="eyebrow">
+THE COZY COLLECTION
+</p>
 
-.footer-column a {
-    color: #F5F2EC;
+<h2>
+Find Your Cozy
+</h2>
 
-    margin-bottom: 10px;
+<p class="section-intro">
+Thoughtfully chosen tools and products to support
+mindfulness, relaxation, better rest, and intentional living.
+</p>
 
-    transition: .3s;
-}
+</div>
 
 
-.footer-column a:hover {
-    color: #A8B89A;
-}
+<div class="shop-cards">
 
 
-.footer-bottom {
-    max-width: 1200px;
+<!-- JOURNALING -->
 
-    margin: auto;
+<a
+href="https://shop.thecozyreset.co/category/journaling-collection"
+class="shop-card"
+>
 
-    padding-top: 25px;
+<div class="shop-icon">
+📖
+</div>
 
-    border-top: 1px solid rgba(255,255,255,.25);
+<h3>
+Journaling
+</h3>
 
-    display: flex;
+<p>
+Create space for reflection, gratitude,
+mindfulness, and personal growth.
+</p>
 
-    justify-content: space-between;
+<span class="shop-card-link">
+Explore Journaling →
+</span>
 
-    align-items: center;
+</a>
 
-    gap: 20px;
-}
 
 
-.footer-bottom p {
-    margin: 0;
+<!-- SLEEP -->
 
-    color: #F5F2EC;
+<a
+href="https://shop.thecozyreset.co/category/sleep-collection"
+class="shop-card"
+>
 
-    font-size: 14px;
-}
+<div class="shop-icon">
+🌙
+</div>
 
+<h3>
+Sleep
+</h3>
 
-.footer-legal {
-    display: flex;
+<p>
+Create a calming nighttime routine
+and make space for deeper rest.
+</p>
 
-    gap: 25px;
-}
+<span class="shop-card-link">
+Explore Sleep →
+</span>
 
+</a>
 
-.footer-legal a {
-    color: #F5F2EC;
 
-    font-size: 14px;
-}
 
+<!-- RELAXATION -->
 
-.footer-legal a:hover {
-    color: #A8B89A;
-}
+<a
+href="https://shop.thecozyreset.co/category/relaxation-collection"
+class="shop-card"
+>
 
+<div class="shop-icon">
+🕯️
+</div>
 
-/* =========================================
-   POLICY PAGES
-========================================= */
+<h3>
+Relaxation
+</h3>
 
-.policy-page {
-    max-width: 900px;
+<p>
+Slow down, unwind, and create
+moments of calm throughout your day.
+</p>
 
-    margin: 70px auto;
+<span class="shop-card-link">
+Explore Relaxation →
+</span>
 
-    padding: 50px;
+</a>
 
-    background: #FFFFFF;
 
-    border-radius: 18px;
 
-    box-shadow: 0 10px 30px rgba(0,0,0,.06);
-}
+<!-- DESK RESET -->
 
+<a
+href="https://shop.thecozyreset.co/category/desk-reset-collection"
+class="shop-card"
+>
 
-.policy-page h2 {
-    font-family: 'Cormorant Garamond', serif;
+<div class="shop-icon">
+🖥️
+</div>
 
-    font-size: 32px;
+<h3>
+Desk Reset
+</h3>
 
-    color: #7C5C4D;
+<p>
+Bring calm and intention to your
+workspace with mindful desk tools.
+</p>
 
-    margin-top: 40px;
+<span class="shop-card-link">
+Explore Desk Reset →
+</span>
 
-    margin-bottom: 15px;
-}
+</a>
 
 
-.policy-page h2:first-child {
-    margin-top: 0;
-}
 
+<!-- COZY HOME -->
 
-.policy-page p {
-    color: #555;
+<a
+href="https://shop.thecozyreset.co/category/cozy-home-collection"
+class="shop-card"
+>
 
-    font-size: 16px;
+<div class="shop-icon">
+🏡
+</div>
 
-    line-height: 1.9;
+<h3>
+Cozy Home
+</h3>
 
-    margin-bottom: 20px;
-}
+<p>
+Create a comforting space with
+cozy décor and calming wellness tools.
+</p>
 
+<span class="shop-card-link">
+Explore Cozy Home →
+</span>
 
-.policy-page ul {
-    margin: 20px 0 30px 25px;
-}
+</a>
 
 
-.policy-page li {
-    margin-bottom: 12px;
+</div>
 
-    color: #555;
-}
 
+<div class="shop-button">
 
-.policy-page a {
-    color: #7C5C4D;
+<a href="https://shop.thecozyreset.co" class="btn">
+Explore The Full Shop
+</a>
 
-    font-weight: 600;
-}
+</div>
 
 
-.policy-page a:hover {
-    color: #A8B89A;
-}
+</section>
 
 
-/* =========================================
-   TABLET
-========================================= */
 
-@media (max-width: 900px) {
+<!-- ABOUT THE COZY RESET -->
 
-    .card-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+<section class="home-about">
 
+<div class="about-content">
 
-    .blog-cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
 
+<div class="about-text">
 
-    .reset-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+<p class="eyebrow">
+ABOUT THE COZY RESET
+</p>
 
+<h2>
+A gentle reminder that you deserve moments of calm.
+</h2>
 
-    /* Collection becomes 2 columns */
+<p>
+Life can feel overwhelming. Between responsibilities,
+expectations, and constant demands, it can be easy to forget
+to slow down and care for yourself.
+</p>
 
-    .shop-cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
+<p>
+The Cozy Reset was created as a space to reconnect with
+yourself through mindfulness, self-care, and intentional living.
+Through thoughtful resources, cozy tools, and gentle reminders,
+we believe small moments of care can create meaningful change.
+</p>
 
+<p>
+Whether you're taking a few minutes to journal, practicing
+mindfulness, or creating a calming space at home, every reset
+is an opportunity to begin again.
+</p>
 
-    .shop-card:nth-child(1),
-    .shop-card:nth-child(2),
-    .shop-card:nth-child(3),
-    .shop-card:nth-child(4),
-    .shop-card:nth-child(5) {
-        grid-column: span 1;
-    }
+<a href="about.html" class="btn">
+Learn More About The Cozy Reset
+</a>
 
+</div>
 
-    .shop-card:nth-child(5) {
-        grid-column: 1 / -1;
-        max-width: 50%;
-        width: 100%;
-        justify-self: center;
-    }
 
+<div class="about-image">
 
-    .about-content {
-        grid-template-columns: 1fr;
-    }
+<img
+src="images/cozy-about.jpg"
+alt="Cozy self-care space with journal and candle"
+>
 
+</div>
 
-    .footer-content {
-        grid-template-columns: 1fr 1fr;
-        gap: 35px;
-    }
 
+</div>
 
-    .footer-brand {
-        grid-column: 1 / -1;
-    }
+</section>
 
 
-    .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-    }
 
+<!-- COZY COMMUNITY -->
 
-    .footer-legal {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
+<section class="cozy-community">
 
-}
+<div class="community-content">
 
+<p class="eyebrow">
+YOUR NEXT RESET
+</p>
 
-/* =========================================
-   MOBILE
-========================================= */
+<h2>
+A Little More Calm, Delivered.
+</h2>
 
-@media (max-width: 768px) {
+<p>
+Join The Cozy Community for gentle reminders, mindfulness tips,
+self-care ideas, journal prompts, and new resources.
+</p>
 
-    header {
-        padding: 20px 15px;
 
-        flex-direction: column;
+<form
+    action="https://app.kit.com/forms/9786818/subscriptions"
+    method="post"
+    class="newsletter-form"
+>
 
-        gap: 15px;
-    }
+<input
+    type="text"
+    name="fields[first_name]"
+    placeholder="First Name"
+    aria-label="First Name"
+    required
+>
 
+<input
+    type="email"
+    name="email_address"
+    placeholder="Email Address"
+    aria-label="Email Address"
+    required
+>
 
-    nav {
-        display: flex;
+<button type="submit" class="btn">
+Get My Free Cozy Reset
+</button>
 
-        flex-wrap: wrap;
+</form>
 
-        justify-content: center;
 
-        gap: 8px 14px;
+<p class="privacy-note">
+Your free 10-Minute Cozy Reset will be delivered by email.
+No pressure. Just cozy reminders and occasional updates.
+</p>
 
-        width: 100%;
-    }
+</div>
 
+</section>
 
-    nav a {
-        font-size: 15px;
 
-        white-space: nowrap;
-    }
 
+<!-- FOOTER -->
 
-    .hero {
-        min-height: 75vh;
-    }
+<footer class="site-footer">
 
+<div class="footer-content">
 
-    .hero h1 {
-        font-size: 2.5rem;
-    }
 
+<!-- BRAND -->
 
-    .hero-text {
-        font-size: 1rem;
-    }
+<div class="footer-brand">
 
+<h2>
+The Cozy Reset
+</h2>
 
-    .hero-buttons {
-        flex-direction: column;
+<p>
+Helping you create calm in the middle
+of life's chaos.
+</p>
 
-        align-items: center;
-    }
+</div>
 
 
-    .section-title h2 {
-        font-size: 2.2rem;
-    }
 
+<!-- EXPLORE -->
 
-    .card-grid,
-    .blog-cards,
-    .reset-grid {
-        grid-template-columns: 1fr;
-    }
+<div class="footer-column">
 
+<h3>
+Explore
+</h3>
 
-    .article {
-        margin: 20px;
+<a href="index.html">
+Home
+</a>
 
-        padding: 30px;
-    }
+<a href="blog.html">
+Blog
+</a>
 
+<a href="https://shop.thecozyreset.co">
+Shop
+</a>
 
-    .article h1 {
-        font-size: 2.7rem;
-    }
+<a href="about.html">
+About
+</a>
 
+<a href="contact.html">
+Contact
+</a>
 
-    .about-text h2 {
-        font-size: 34px;
-    }
+</div>
 
 
-    .find-reset {
-        padding: 70px 20px;
-    }
 
+<!-- RESOURCES -->
 
-    .reset-card {
-        padding: 32px 22px;
-    }
+<div class="footer-column">
 
+<h3>
+Resources
+</h3>
 
-    .newsletter-form {
-        width: 100%;
-        max-width: 500px;
-    }
+<a href="blog/anxiety.html">
+Understanding Anxiety
+</a>
 
+<a href="blog/mindful-monday.html">
+Mindful Monday
+</a>
 
-    .newsletter-form input,
-    .newsletter-form .btn {
-        width: 100%;
-    }
+<a href="blog/progress-over-perfection.html">
+Progress Over Perfection
+</a>
 
+<a href="blog/rest.html">
+You Don't Need to Earn Rest
+</a>
 
-    .footer-content {
-        grid-template-columns: 1fr;
+<a href="blog/art-of-the-reset.html">
+The Art of the Reset
+</a>
 
-        text-align: center;
-    }
+</div>
 
 
-    .footer-brand {
-        grid-column: auto;
-    }
 
+<!-- CONNECT -->
 
-    .footer-brand p {
-        margin: auto;
-    }
+<div class="footer-column">
 
+<h3>
+Connect
+</h3>
 
-    .footer-column {
-        align-items: center;
-    }
+<a href="contact.html">
+Get In Touch
+</a>
 
-}
+<a
+href="https://www.instagram.com/thecozyresetshop/"
+target="_blank"
+rel="noopener"
+>
+Instagram
+</a>
 
+</div>
 
-/* =========================================
-   SMALL MOBILE
-========================================= */
 
-@media (max-width: 500px) {
+</div>
 
-    .hero h1 {
-        font-size: 2.2rem;
-    }
 
 
-    .hero-overlay {
-        padding: 25px;
-    }
+<!-- FOOTER BOTTOM -->
 
+<div class="footer-bottom">
 
-    .shop-card {
-        padding: 30px 20px;
-    }
+<p>
+© 2026 The Cozy Reset. All rights reserved.
+</p>
 
+<div class="footer-legal">
 
-    .shop-card h3 {
-        font-size: 21px;
-    }
+<a href="privacy.html">
+Privacy Policy
+</a>
 
+<a href="terms.html">
+Terms & Conditions
+</a>
 
-    .shop-button {
-        margin-top: 35px;
-    }
+</div>
 
+</div>
 
-    .policy-page {
-        margin: 30px 20px;
+</footer>
 
-        padding: 30px 25px;
-    }
 
 
-    .policy-page h2 {
-        font-size: 28px;
-    }
+<script src="js/script.js"></script>
 
-}
+</body>
 
+</html>
+```
