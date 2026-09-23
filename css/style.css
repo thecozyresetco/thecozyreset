@@ -1674,18 +1674,22 @@ nav a.active {
 
 }
 
-/* FREE COZY RESET */
+/* =========================================
+   FREE COZY RESET
+========================================= */
 
 .free-reset-content {
+    max-width: 1000px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 50px;
-    max-width: 1100px;
-    margin: 0 auto;
 }
 
 .free-reset-text {
     flex: 1;
+    min-width: 0;
 }
 
 .free-reset-text h3 {
@@ -1703,21 +1707,27 @@ nav a.active {
 }
 
 .free-reset-image {
-    flex: 0 0 38%;
+    flex: 0 0 280px;
+    width: 280px;
+    max-width: 280px;
     text-align: center;
 }
 
 .free-reset-image img {
-    width: 100%;
-    max-width: 350px;
-    height: auto;
     display: block;
+    width: 260px;
+    max-width: 260px;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
     margin: 0 auto;
     border-radius: 12px;
 }
 
 
-/* MOBILE */
+/* =========================================
+   FREE COZY RESET - MOBILE
+========================================= */
 
 @media (max-width: 768px) {
 
@@ -1731,67 +1741,15 @@ nav a.active {
     }
 
     .free-reset-image {
+        flex: none;
         width: 100%;
+        max-width: 100%;
     }
 
     .free-reset-image img {
-        max-width: 280px;
-    }
-
-}
-
-/* =========================================
-   FREE COZY RESET IMAGE - SIZE OVERRIDE
-   ========================================= */
-
-section#free-reset .free-reset-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-section#free-reset .free-reset-image {
-    width: 320px !important;
-    max-width: 320px !important;
-    flex: 0 0 320px !important;
-    text-align: center;
-}
-
-section#free-reset .free-reset-image img {
-    display: block !important;
-    width: 300px !important;
-    max-width: 300px !important;
-    height: auto !important;
-    max-height: 450px !important;
-    object-fit: contain !important;
-    margin: 0 auto !important;
-}
-
-
-/* MOBILE */
-
-@media (max-width: 768px) {
-
-    section#free-reset .free-reset-content {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    section#free-reset .free-reset-image {
-        width: 100% !important;
-        max-width: 100% !important;
-        flex: none !important;
-    }
-
-    section#free-reset .free-reset-image img {
-        width: 260px !important;
-        max-width: 260px !important;
-        max-height: 390px !important;
-        margin: 0 auto !important;
+        width: 240px;
+        max-width: 240px;
+        max-height: 360px;
     }
 
 }
