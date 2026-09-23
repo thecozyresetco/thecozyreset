@@ -1739,3 +1739,59 @@ nav a.active {
     }
 
 }
+
+/* =========================================
+   FREE COZY RESET IMAGE - SIZE OVERRIDE
+   ========================================= */
+
+section#free-reset .free-reset-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+section#free-reset .free-reset-image {
+    width: 320px !important;
+    max-width: 320px !important;
+    flex: 0 0 320px !important;
+    text-align: center;
+}
+
+section#free-reset .free-reset-image img {
+    display: block !important;
+    width: 300px !important;
+    max-width: 300px !important;
+    height: auto !important;
+    max-height: 450px !important;
+    object-fit: contain !important;
+    margin: 0 auto !important;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    section#free-reset .free-reset-content {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    section#free-reset .free-reset-image {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: none !important;
+    }
+
+    section#free-reset .free-reset-image img {
+        width: 260px !important;
+        max-width: 260px !important;
+        max-height: 390px !important;
+        margin: 0 auto !important;
+    }
+
+}
